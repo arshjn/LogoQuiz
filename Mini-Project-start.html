@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<!--
+    CSIS 3020 Mini Project
+    Submitted by: Arsh Jain
+    Submitted to: Dr. Ajoy Kumar
+    Tested in Google Chrome, MS Edge
+-->
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Welcome to the Logo Quiz</title>
+    <style type="text/css">
+        html,
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .bg_image {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .fg_image {
+            position: fixed;
+            margin-top: 10%;
+            margin-left: 37%;
+            z-index: 2;
+            width: 26%;
+            border-style: solid;
+
+        }
+
+        p {
+            position: fixed;
+            z-index: 3;
+            margin-top: 28%;
+            margin-left: 47%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg" class="bg_image"
+        alt="Background image" />
+    <img src="https://logoquiz.net/logo.png" class="fg_image" alt="Foreground image" />
+
+    <p>
+        <button onclick="document.location='Mini-Project.html'">Start Quiz</button>
+    </p>
+</body>
+
+</html>
