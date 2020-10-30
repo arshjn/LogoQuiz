@@ -2,10 +2,6 @@ var imgArray = ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDon
 var answerArray = ["McDonalds", "Dominos", "Bank of America", "Wendys"];
 var correctAnswers = 0;
 var total = 0;
-var A = document.getElementById("option1");
-var B = document.getElementById("option2");
-var C = document.getElementById("option3");
-var D = document.getElementById("option4");
 var currentCorrectOption = 0;
 var tempArray = [""];
 
@@ -21,6 +17,7 @@ function checkAction() {
 
 function nextQuestion(){
     setQuestion(getQuestion(), getCorrectOption());
+    checkAction();
 }
 
 function submit() {
