@@ -16,15 +16,18 @@ function checkAction() {
 }
 
 function nextQuestion(){
+    var message = document.getElementById("message");
+    message.innerHTML = ""
     setQuestion(getQuestion(), getCorrectOption());
     checkAction();
 }
 
 function submit() {
     var selection = checkResponse();
-    var message = document.getElementById("message")
+    var message = document.getElementById("message");
     if (selection == -1) {
         message.innerHTML = "No Option Selected"
+        checkAction();
     }
     else {
         if (selection == currentCorrectOption) {
@@ -36,8 +39,8 @@ function submit() {
         }
         updateScoreTable();
         console.log("Updated Score Table");
+        nextQuestion();
     }
-    nextQuestion();
 }
 
 function checkResponse() {
