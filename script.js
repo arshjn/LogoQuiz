@@ -1,6 +1,6 @@
-var imgArray = ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png"];
-var answerArray = ["McDonalds", "KFC", "Pizza Hut", "Dominos"];
-var correct = 0;
+var imgArray = ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Domino%27s_pizza_logo.svg/1024px-Domino%27s_pizza_logo.svg.png"];
+var answerArray = ["McDonalds", "Dominos", "Bank of America", "Wendys"];
+var correctAnswers = 0;
 var total = 0;
 var A = document.getElementById("option1");
 var B = document.getElementById("option2");
@@ -10,27 +10,74 @@ var currentCorrectOption = 0;
 var tempArray = [""];
 
 function start() {
-    setQuestion(getQuestion(), getCorrectOption())
-    var button = document.getElementById("TossButton");
-    button.addEventListener("click", flipCoin, false);
+    setQuestion(getQuestion(), getCorrectOption());
+    checkAction();
+}
+
+function checkAction() {
+    var submitButton = document.getElementById("SubmitButton");
+    submitButton.addEventListener("click", submit, false);
+}
+
+function nextQuestion(){
+    setQuestion(getQuestion(), getCorrectOption());
+}
+
+function submit() {
+    var selection = checkResponse();
+    var message = document.getElementById("message")
+    if (selection == -1) {
+        message.innerHTML = "No Option Selected"
+    }
+    else {
+        if (selection == currentCorrectOption) {
+            correctAnswers++;
+            message.innerHTML = "Correct Answer !";
+        }
+        else {
+            message.innerHTML = "Wrong Answer !";
+        }
+        updateScoreTable();
+        console.log("Updated Score Table");
+    }
+    nextQuestion();
+}
+
+function checkResponse() {
+    if (document.getElementById("option1").checked) {
+        return 0;
+    }
+    else if (document.getElementById("option2").checked) {
+        return 1;
+    }
+    else if (document.getElementById("option3").checked) {
+        return 2;
+    }
+    else if (document.getElementById("option4").checked) {
+        return 3;
+    }
+    else {
+        return -1;
+    }
 }
 
 function getQuestion() {
-    return total;
+    return total++;
 }
+
 function getCorrectOption() {
     currentCorrectOption = Math.floor(Math.random() * 4);
     return currentCorrectOption;
 }
 
 function updateScoreTable() {
-    var tableDiv = document.getElementById("frequencyTableDiv");
+    var tableDiv = document.getElementById("ScoreTableDiv");
     tableDiv.innerHTML = "<table>" +
         "<caption> Current Score </caption>" +
         "<thead><th> Questions Answered</th> <th> Correct Answers </th>" +
         "<th> Score </th> </thead>" +
-        "<tbody> <tr> <td> " + total + "/20 </td> <td>" + correct + "</td> <td>" +
-        formatPercent(correct / total) + "</td> </tr>" + " </tbody> </table>";
+        "<tbody> <tr> <td> " + total + "/20 </td> <td>" + correctAnswers + "</td> <td>" +
+        formatPercent(correctAnswers / total) + "</td> </tr>" + " </tbody> </table>";
 }
 
 function formatPercent(value) {
@@ -52,7 +99,7 @@ function setOtherOptions(answerChoice) {
     for (var i = 0; i < 4; ++i) {
         var flag = true;
         while (i != answerChoice && flag) {
-            var temp = randomAnswer();
+            var temp = randomAnswerChoice();
             if (tempArray.includes(temp)) {
                 continue;
             }
@@ -60,14 +107,12 @@ function setOtherOptions(answerChoice) {
                 label[i].innerHTML = temp;
                 tempArray.push(temp);
                 flag = false;
-                console.log("temp = "+ temp);
-                console.log("label["+i+"] = " + label[i]);
             }
         }
     }
 }
 
-function randomAnswer() {
+function randomAnswerChoice() {
     var index = Math.floor(Math.random() * 4);
     return answerArray[index];
 }
