@@ -4,6 +4,7 @@ var correctAnswers = 0;
 var total = 0;
 var currentCorrectOption = 0;
 var tempArray = [""];
+var askedQuestions = [];
 var currentQuestionIndex = 0;
 
 function start() {
@@ -42,12 +43,20 @@ function nextQuestion() {
         return;
     }
     resetOptions();
-    console.log("Cleared Message");
     setQuestion(getCorrectOption());
-    console.log("Set new question");
     checkAction();
-    console.log("Checking for Action");
 }
+
+
+function getQuestion() {
+    currentQuestionIndex = Math.floor(Math.random()*20);
+    while (askedQuestions.includes(currentQuestionIndex)){
+        currentQuestionIndex = Math.floor(Math.random()*20);
+    }
+    askedQuestions.push(currentQuestionIndex);
+    total++;    
+}
+
 
 function finished(){
     document.getElementById("mainDiv").innerHTML = " ";
@@ -87,7 +96,6 @@ function submit() {
             message.innerHTML = "Wrong Answer !";
         }
         updateScoreTable();
-        console.log("Updated Score Table");
     }
 }
 
@@ -114,10 +122,6 @@ function checkResponse() {
     else {
         return -1;
     }
-}
-
-function getQuestion() {
-    currentQuestionIndex = total++;
 }
 
 function getCorrectOption() {
