@@ -30,8 +30,7 @@ img {
 }
 
 .FormButtons{
-    margin-left: 40%;
-    padding-top: 5%;
+    margin-left: 35%;
 }
 
 .FormButtons .button {
@@ -51,10 +50,13 @@ img {
   
 #ScoreTableDiv {
     margin-left: 25%;
+    padding-left: 20%;
 }
 
 #message {
-    padding-left: 15%;
+    text-align: center;
+    padding-left: 3%;
+    padding-top: 3%;
 }
 table {
     width: 200px;
