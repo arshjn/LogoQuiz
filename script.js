@@ -26,17 +26,22 @@ function checkAction() {
 function skip() {
     var submitButton = document.getElementById("SubmitButton");
     submitButton.disabled = true;
+    var NextButton = document.getElementById("NextButton");
+    NextButton.disabled = false;
     var message = document.getElementById("message");
     message.innerHTML = "Correct Answer was option " + (currentCorrectOption+1) + ": " + answerArray[currentQuestionIndex];
+    updateScoreTable();
 }
 
 function nextQuestion() {
     var message = document.getElementById("message");
     message.innerHTML = " ";
-    if (total > 20){
-        displayScore();
+    console.log("Total = "+ total);
+    if (total == 20){
+        finished();
         return;
     }
+    resetOptions();
     console.log("Cleared Message");
     setQuestion(getCorrectOption());
     console.log("Set new question");
@@ -44,9 +49,29 @@ function nextQuestion() {
     console.log("Checking for Action");
 }
 
+function finished(){
+    document.getElementById("mainDiv").innerHTML = " ";
+    document.getElementById("Form").innerHTML = " ";
+    FinishScoreTable();
+}
+
+function FinishScoreTable(){
+    var finish = document.getElementById("finish");
+    finish.innerHTML = "Thank you for taking the Logo Quiz."
+    var tableDiv = document.getElementById("ScoreTableDiv");
+    tableDiv.innerHTML = "<table>" +
+        "<caption> Final Score </caption>" +
+        "<thead><th> Questions Answered</th> <th> Correct Answers </th>" +
+        "<th> Score </th> </thead>" +
+        "<tbody> <tr> <td> " + total + "/20 </td> <td>" + correctAnswers + "</td> <td>" +
+        formatPercent(correctAnswers / total) + "%</td> </tr>" + " </tbody> </table>";
+}
+
 function submit() {
     var submitButton = document.getElementById("SubmitButton");
     submitButton.disabled = true;
+    var NextButton = document.getElementById("NextButton");
+    NextButton.disabled = false;
     var selection = checkResponse();
     var message = document.getElementById("message");
     if (selection == -1) {
@@ -64,6 +89,13 @@ function submit() {
         updateScoreTable();
         console.log("Updated Score Table");
     }
+}
+
+function resetOptions(){
+    document.getElementById("option1").checked = false;
+    document.getElementById("option2").checked = false;
+    document.getElementById("option3").checked = false;
+    document.getElementById("option4").checked = false;
 }
 
 function checkResponse() {
@@ -100,7 +132,7 @@ function updateScoreTable() {
         "<thead><th> Questions Answered</th> <th> Correct Answers </th>" +
         "<th> Score </th> </thead>" +
         "<tbody> <tr> <td> " + total + "/20 </td> <td>" + correctAnswers + "</td> <td>" +
-        formatPercent(correctAnswers / total) + "</td> </tr>" + " </tbody> </table>";
+        formatPercent(correctAnswers / total) + "%</td> </tr>" + " </tbody> </table>";
 }
 
 function formatPercent(value) {
@@ -116,6 +148,11 @@ function setQuestion(answerChoice) {
     label.innerHTML = answerArray[currentQuestionIndex];
     tempArray.push(answerArray[currentQuestionIndex]);
     setOtherOptions(answerChoice);
+
+    var NextButton = document.getElementById("NextButton");
+    NextButton.disabled = true;
+
+
 }
 
 function setOtherOptions(answerChoice) {
