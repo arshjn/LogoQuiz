@@ -20,7 +20,8 @@ img {
     margin-top: 6%;
     margin-left: 10%;
     padding: 5% 5% 5% 5%;
-    border: groove black;
+	border: groove black;
+	backdrop-filter: invert(15%);
 }
 
 .mainDiv {
@@ -56,9 +57,15 @@ img {
     font-size: 16px;
 }
 
+.FormButtons .button:disabled {
+	border: .1em solid rgba(0, 0, 0, 0.363);
+}
+
 .FormButtons .button:hover:enabled {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
+
   
 #ScoreTableDiv {
     margin-left: 20%;
@@ -120,7 +127,8 @@ li {
 	padding: 10px;
 	padding-left: 40px;
     height:30px;
-    margin-bottom: 1%;
+	margin-bottom: 1%;
+	white-space: nowrap;
 }
 
 label:before {
