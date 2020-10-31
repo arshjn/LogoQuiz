@@ -1,5 +1,5 @@
-var imgArray = ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Domino%27s_pizza_logo.svg/1024px-Domino%27s_pizza_logo.svg.png", "https://www.logotaglines.com/wp-content/uploads/2016/11/Bank-Of-America-Logo.png", "https://logodix.com/logo/20228.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1200px-Playstation_logo_colour.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png", "https://lh3.googleusercontent.com/proxy/eNiONUe-NIlFlpOmUw1uwfy7hT2K49owBxMo_ShwmtiehrNzIPEOhZH5l3SWg0q-mov6Ft7rxa8wKwOIk839jGXeP6AU4NFhRFpoeuq5xcLeb-DIC62P-d5QxUQ", "https://lh3.googleusercontent.com/proxy/oPjJt1E1cGHz31jg-UliS4sVbaKRklvozalVKcYaao_pPxGfdFxK7HfF6Ls_D2_F645TvwPyIjCqFHy17CpmPzeBDl9vycgMcpFdgTO3ch7SR89jpr-CYo3i9QLX", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/General_Electric_logo.svg/240px-General_Electric_logo.svg.png","https://upload.wikimedia.org/wikipedia/commons/a/a6/Vodafone_icon.svg", "https://purepng.com/public/uploads/medium/purepng.com-renault-logorenaultgroupe-renaultautomobile-manufacturerrenault-automobilesrenault-logo-1701527610699mb9ol.png", "https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png", "https://lh3.googleusercontent.com/proxy/yaQB2-el6FeeOJ_M8UDXK8bKb1mBZCPxOSfIvsb0He3aa8kyPSJZ62WIppHpu8Ja9ddxSipcQsqx15mgH687NpqLGU7-cgMSiV7eObqkOYGmlCfblmX_RYL_1QY", "https://www.jetpunk.com/img/user-photo-library/a9/a9adb4cf11-450.png", "https://www.car-brand-names.com/wp-content/uploads/2016/03/Suzuki-logo.png", "https://1000logos.net/wp-content/uploads/2019/05/Sprint-emblem.jpg", "https://dwglogo.com/wp-content/uploads/2019/03/2200px-lufthansa_logo.png", "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png", "https://previews.us-east-1.widencdn.net/preview/39977711/assets/asset-view/75cd02dd-912e-48a5-abe2-44ea6b452fba/thumbnail/eyJ3IjoyMDQ4LCJoIjoyMDQ4LCJzY29wZSI6ImFwcCJ9?Expires=1604113200&Signature=Iuy2c2jeiVtsi~I9zVM8cm22s6pF47x5yZKNhxljWPRxi~XZYlmFDQnz33IwPZ~04ptgkIE7eyMC1L51Zg8YdZXzS~FZ36ySCEuGkQLaX1LAAtGrUD4prP3TuI8HbCmKngACbHGIoBER4710ITMBW5q7WxstUKbskP33ngPmqEdg5YQ8sdTM86uOglI5Oh97tbjxiyizx82eXrdDUbuAJI9vnZF4B0xsCDw33XDVGvQpGl2X1uJTgmpZVSK52GH1tNmHf7uxZiI~7QjkMwtCH9O7ukCFI4dNpsHDeDNQRTy7RQgEuoSGonoVvKfB-I2GJIIisQxQ3kK2nVfAXaeVXw__&Key-Pair-Id=APKAJM7FVRD2EPOYUXBQ", "https://www.pngkit.com/png/full/244-2445923_international-cricket-council-logo-icc-cricket-logo-png.png" ];
-var answerArray = ["McDonalds", "Dominos", "Bank of America", "X-box", "Play Station", "Instagram", "Expedia", "Maserati", "General Electric", "Vodafone", "Renault", "Twitter", "Lucky-Goldstar Electronics", "Beats", "Suzuki", "Sprint", "Lufthansa", "Starbucks", "Nova Southeastern University", "ICC" ];
+var imgArray = ["https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Domino%27s_pizza_logo.svg/1024px-Domino%27s_pizza_logo.svg.png", "https://www.logotaglines.com/wp-content/uploads/2016/11/Bank-Of-America-Logo.png", "https://logodix.com/logo/20228.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1200px-Playstation_logo_colour.svg.png", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png", "https://lh3.googleusercontent.com/proxy/eNiONUe-NIlFlpOmUw1uwfy7hT2K49owBxMo_ShwmtiehrNzIPEOhZH5l3SWg0q-mov6Ft7rxa8wKwOIk839jGXeP6AU4NFhRFpoeuq5xcLeb-DIC62P-d5QxUQ", "https://lh3.googleusercontent.com/proxy/oPjJt1E1cGHz31jg-UliS4sVbaKRklvozalVKcYaao_pPxGfdFxK7HfF6Ls_D2_F645TvwPyIjCqFHy17CpmPzeBDl9vycgMcpFdgTO3ch7SR89jpr-CYo3i9QLX", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/General_Electric_logo.svg/240px-General_Electric_logo.svg.png", "https://upload.wikimedia.org/wikipedia/commons/a/a6/Vodafone_icon.svg", "https://purepng.com/public/uploads/medium/purepng.com-renault-logorenaultgroupe-renaultautomobile-manufacturerrenault-automobilesrenault-logo-1701527610699mb9ol.png", "https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png", "https://lh3.googleusercontent.com/proxy/yaQB2-el6FeeOJ_M8UDXK8bKb1mBZCPxOSfIvsb0He3aa8kyPSJZ62WIppHpu8Ja9ddxSipcQsqx15mgH687NpqLGU7-cgMSiV7eObqkOYGmlCfblmX_RYL_1QY", "https://www.jetpunk.com/img/user-photo-library/a9/a9adb4cf11-450.png", "https://www.car-brand-names.com/wp-content/uploads/2016/03/Suzuki-logo.png", "https://1000logos.net/wp-content/uploads/2019/05/Sprint-emblem.jpg", "https://dwglogo.com/wp-content/uploads/2019/03/2200px-lufthansa_logo.png", "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png", "https://previews.us-east-1.widencdn.net/preview/39977711/assets/asset-view/75cd02dd-912e-48a5-abe2-44ea6b452fba/thumbnail/eyJ3IjoyMDQ4LCJoIjoyMDQ4LCJzY29wZSI6ImFwcCJ9?Expires=1604113200&Signature=Iuy2c2jeiVtsi~I9zVM8cm22s6pF47x5yZKNhxljWPRxi~XZYlmFDQnz33IwPZ~04ptgkIE7eyMC1L51Zg8YdZXzS~FZ36ySCEuGkQLaX1LAAtGrUD4prP3TuI8HbCmKngACbHGIoBER4710ITMBW5q7WxstUKbskP33ngPmqEdg5YQ8sdTM86uOglI5Oh97tbjxiyizx82eXrdDUbuAJI9vnZF4B0xsCDw33XDVGvQpGl2X1uJTgmpZVSK52GH1tNmHf7uxZiI~7QjkMwtCH9O7ukCFI4dNpsHDeDNQRTy7RQgEuoSGonoVvKfB-I2GJIIisQxQ3kK2nVfAXaeVXw__&Key-Pair-Id=APKAJM7FVRD2EPOYUXBQ", "https://www.pngkit.com/png/full/244-2445923_international-cricket-council-logo-icc-cricket-logo-png.png"];
+var answerArray = ["McDonalds", "Dominos", "Bank of America", "X-box", "Play Station", "Instagram", "Expedia", "Maserati", "General Electric", "Vodafone", "Renault", "Twitter", "Lucky-Goldstar Electronics", "Beats", "Suzuki", "Sprint", "Lufthansa", "Starbucks", "Nova Southeastern University", "ICC"];
 var correctAnswers = 0;
 var total = 0;
 var currentCorrectOption = 0;
@@ -30,15 +30,36 @@ function skip() {
     var NextButton = document.getElementById("NextButton");
     NextButton.disabled = false;
     var message = document.getElementById("message");
-    message.innerHTML = "Correct Answer was option " + (currentCorrectOption+1) + ": " + answerArray[currentQuestionIndex];
+    message.innerHTML = "Correct Answer was option " + (currentCorrectOption + 1) + ": " + answerArray[currentQuestionIndex];
+    selectCorrect();
     updateScoreTable();
+}
+
+function selectCorrect(){
+    var o1 = document.getElementById("option1").checked;
+    var o2 = document.getElementById("option2").checked;
+    var o3 = document.getElementById("option3").checked;
+    var o4 = document.getElementById("option4").checked;
+    if (currentCorrectOption == 0){
+        o1.checked = true;
+    }
+    else if (currentCorrectOption == 1){
+        o2.checked = true;
+    }
+    else if (currentCorrectOption == 2){
+        o3.checked = true;
+    }
+    else if (currentCorrectOption == 3){
+        o4.checked = true;
+    }
+
 }
 
 function nextQuestion() {
     var message = document.getElementById("message");
     message.innerHTML = " ";
-    console.log("Total = "+ total);
-    if (total == 20){
+    console.log("Total = " + total);
+    if (total == 20) {
         finished();
         return;
     }
@@ -49,22 +70,22 @@ function nextQuestion() {
 
 
 function getQuestion() {
-    currentQuestionIndex = Math.floor(Math.random()*20);
-    while (askedQuestions.includes(currentQuestionIndex)){
-        currentQuestionIndex = Math.floor(Math.random()*20);
+    currentQuestionIndex = Math.floor(Math.random() * 20);
+    while (askedQuestions.includes(currentQuestionIndex)) {
+        currentQuestionIndex = Math.floor(Math.random() * 20);
     }
     askedQuestions.push(currentQuestionIndex);
-    total++;    
+    total++;
 }
 
 
-function finished(){
+function finished() {
     document.getElementById("mainDiv").innerHTML = " ";
     document.getElementById("Form").innerHTML = " ";
     FinishScoreTable();
 }
 
-function FinishScoreTable(){
+function FinishScoreTable() {
     var finish = document.getElementById("finish");
     finish.innerHTML = "Thank you for taking the Logo Quiz."
     var tableDiv = document.getElementById("ScoreTableDiv");
@@ -99,7 +120,7 @@ function submit() {
     }
 }
 
-function resetOptions(){
+function resetOptions() {
     document.getElementById("option1").checked = false;
     document.getElementById("option2").checked = false;
     document.getElementById("option3").checked = false;

@@ -16,39 +16,59 @@
         html,
         body {
             font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
 
-        .bg_image {
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            z-index: 1;
-            width: 100%;
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .fg_image {
-            position: fixed;
+            position: relative;
             margin-top: 10%;
             margin-left: 37%;
-            z-index: 2;
             width: 26%;
             border-style: solid;
 
         }
 
         p {
-            position: fixed;
-            z-index: 3;
-            margin-top: 28%;
-            margin-left: 47%;
+            position: relative;
+            text-align: center;
+            padding-top: 5%;
+        }
+
+        button {
+            background-color: transparent;
+            border: .1em solid black;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: solid;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        button:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     </style>
 </head>
 
 <body>
 
-    <img src="https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg" class="bg_image"
-        alt="Background image" />
     <img src="https://logoquiz.net/logo.png" class="fg_image" alt="Foreground image" />
 
     <p>
