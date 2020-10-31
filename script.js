@@ -38,10 +38,10 @@ function skip() {
 }
 
 function selectCorrect(){
-    var o1 = document.getElementById("option1").checked;
-    var o2 = document.getElementById("option2").checked;
-    var o3 = document.getElementById("option3").checked;
-    var o4 = document.getElementById("option4").checked;
+    var o1 = document.getElementById("option1");
+    var o2 = document.getElementById("option2");
+    var o3 = document.getElementById("option3");
+    var o4 = document.getElementById("option4");
     if (currentCorrectOption == 0){
         o1.checked = true;
     }
@@ -178,8 +178,6 @@ function setQuestion(answerChoice) {
 
     var NextButton = document.getElementById("NextButton");
     NextButton.disabled = true;
-
-
 }
 
 function setOtherOptions(answerChoice) {
